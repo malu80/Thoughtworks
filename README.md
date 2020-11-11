@@ -34,3 +34,20 @@ Mediawiki as Deployment:
 
 1.	I created Deployment for Mediawiki as this is a now designed as stateless  ( DB Stateful set has to be running before the deployment of Mediawiki)
 2.	Service  created with Nodeport
+
+
+
+HELM :
+
+1. Deployment and statefulset is added ( did not work as espected as statefull has to start before Deployment)
+2. need to create two seperate chart 
+3. Mysql should be added as dependecies chart in Mediawiki chart ( will try this )
+
+CI/CD :
+
+This above steps is easy to intergrate with CI/CD as Mediawiki application part is segregated from DB 
+
+Blue green Deployemnt:
+
+1. Will work as in helm chart i have added the image of  mediawiki  in values yaml 
+2. CI/CD itself can handle Blue/green deployment of mediawiki 
