@@ -32,4 +32,5 @@ I created Mediawiki Image with Apache and Php with Mediawiki package.
 
 Mediawiki as Deployment:
 
-I created Deployment for Mediawiki as this is a now designed as stateless  ( DB Stateful set has to be running before the deployment of Mediawiki)
+1.	I created Deployment for Mediawiki as this is a now designed as stateless  ( DB Stateful set has to be running before the deployment of Mediawiki)
+2.	Service  created with Nodeport
