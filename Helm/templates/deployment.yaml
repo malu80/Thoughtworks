@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: mediawiki
+spec:
+  selector:
+    matchLabels:
+      app: mediawiki
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: mediawiki
+    spec:
+      containers:
+      - name: mediawiki
+        image: "{{ .Values.mediaimage.name }}"
+        ports:
+        - containerPort: 80
